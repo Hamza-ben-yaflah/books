@@ -13,7 +13,11 @@ function App() {
       .catch((error) => setError(error));
   }, []);
 
-  return <div>{books && books.results.map((book) => <Card inf={book} />)}</div>;
+  return (
+    <div style={{ display: "flex" }}>
+      {books && books.results.map((book) => <Card inf={book} />)}
+    </div>
+  );
 }
 
 export default App;
